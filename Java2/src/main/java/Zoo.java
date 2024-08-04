@@ -1,5 +1,8 @@
 import animals.*;
 import food.*;
+
+import java.util.ArrayList;
+
 public class Zoo {
     public static void main(String[] args) {
         Herb herb1 = new Herb("bunch of fresh grass");
@@ -17,22 +20,23 @@ public class Zoo {
         Worker worker1 = new Worker();
         worker1.feed(duck1, herb1);
         worker1.getVoice(duck1);
-        worker1.feed(cow1,shrimp1);
+        worker1.feed(cow1, shrimp1);
         worker1.getVoice(cow1);
-        worker1.feed(lama1,shrimp1);
+        worker1.feed(lama1, shrimp1);
         worker1.getVoice(lama1);
-        worker1.feed(fish1,shrimp1);
+        worker1.feed(fish1, shrimp1);
         //worker1.getVoice(fish1);
-        worker1.feed(eagle1,seaweed1);
+        worker1.feed(eagle1, seaweed1);
         worker1.getVoice(eagle1);
-        worker1.feed(wolf1,rabbit1);
+        worker1.feed(wolf1, rabbit1);
         worker1.getVoice(wolf1);
-        Swim[] pond = new Swim[5];
-        pond[0] = new Duck("duckInPond_0");
-        pond[1] = new Duck("duckInPond_1");
-        pond[2] = new Duck("duckInPond_2");
-        pond[3] = new Fish("fishInPond_0");
-        pond[4] = new Fish("fishInPond_1");
+        ArrayList<Swim> pond = new ArrayList<>();
+        pond.add(new Duck("duckInPond_0"));
+        pond.add(new Duck("duckInPond_1"));
+        pond.add(new Duck("duckInPond_2"));
+        pond.add(new Fish("fishInPond_0"));
+        pond.add(new Fish("fishInPond_1"));
+        pond.add(new Fish("fishInPond_2"));
         for (Swim animal : pond) {
             animal.swim();
         }
